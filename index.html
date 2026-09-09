@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bestie Brides | A Bestie for the Journey</title>
+  <meta name="description" content="Bestie Brides is a faith-based, Black-owned bridal support company providing every bride with her very own professional Bestie for the wedding journey." />
+
+  <!-- Royal typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --teal:#18B8BA;
+      --deep-teal:#087C80;
+      --teal-dark:#07575A;
+      --gold:#D6A52D;
+      --gold-light:#F4D98B;
+      --ivory:#FFFDF8;
+      --white:#FFFFFF;
+      --ink:#17393A;
+      --muted:#637778;
+      --line:rgba(214,165,45,.28);
+      --shadow:0 20px 60px rgba(7,87,90,.12);
+      --radius:24px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:"Montserrat",sans-serif;
+      background:var(--ivory);
+      color:var(--ink);
+      line-height:1.7;
+      overflow-x:hidden;
+    }
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    button,input,textarea,select{font:inherit}
+
+    .container{width:min(1180px,92%);margin:auto}
+
+    /* ---------- TOP BAR / NAV ---------- */
+    .topbar{
+      background:var(--teal-dark);
+      color:#fff;
+      text-align:center;
+      padding:8px 15px;
+      font-size:12px;
+      letter-spacing:1.2px;
+      text-transform:uppercase;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(255,255,255,.96);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav{
+      min-height:88px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:25px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .brand-mark{
+      width:48px;height:48px;
+      border:1.5px solid var(--gold);
+      border-radius:50%;
+      display:grid;place-items:center;
+      color:var(--gold);
+      font-family:"Cinzel Decorative",serif;
+      font-size:16px;
+    }
+    .brand-name{
+      color:var(--deep-teal);
+      font-family:"Cinzel Decorative",serif;
+      font-weight:700;
+      font-size:17px;
+      line-height:1.2;
+    }
+    .brand-sub{
+      display:block;
+      font-family:"Cormorant Garamond",serif;
+      color:var(--gold);
+      font-size:15px;
+      letter-spacing:1.5px;
+      margin-top:2px;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:22px;
+    }
+    .nav-links a{
+      font-size:12px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      color:var(--ink);
+      transition:.25s;
+    }
+    .nav-links a:hover{color:var(--gold)}
+
+    .nav-cta{
+      padding:12px 19px;
+      border-radius:999px;
+      color:#fff !important;
+      background:var(--teal);
+      box-shadow:0 8px 20px rgba(24,184,186,.22);
+    }
+
+    .menu{
+      display:none;
+      border:0;
+      background:transparent;
+      color:var(--deep-teal);
+      font-size:27px;
+      cursor:pointer;
+    }
+
+    /* ---------- BUTTONS ---------- */
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      border-radius:999px;
+      padding:15px 25px;
+      font-size:12px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:1.3px;
+      transition:.3s;
+      border:1px solid transparent;
+      cursor:pointer;
+    }
+    .btn:hover{transform:translateY(-3px)}
+    .btn-primary{
+      background:var(--teal);
+      color:#fff;
+      box-shadow:0 12px 30px rgba(24,184,186,.22);
+    }
+    .btn-primary:hover{background:var(--deep-teal)}
+    .btn-gold{
+      background:var(--gold);
+      color:#fff;
+      box-shadow:0 12px 30px rgba(214,165,45,.22);
+    }
+    .btn-outline{
+      border-color:var(--gold);
+      color:var(--deep-teal);
+      background:#fff;
+    }
+    .btn-outline:hover{background:#fff8e7}
+
+    /* ---------- HERO ---------- */
+    .hero{
+      min-height:calc(100vh - 97px);
+      display:grid;
+      place-items:center;
+      position:relative;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 10% 15%, rgba(24,184,186,.10), transparent 27%),
+        radial-gradient(circle at 88% 10%, rgba(214,165,45,.14), transparent 26%),
+        linear-gradient(135deg,#fff 0%,#f4fcfb 55%,#fffdf8 100%);
+      padding:75px 0 90px;
+    }
+    .hero::before,.hero::after{
+      content:"";
+      position:absolute;
+      border:1px solid rgba(214,165,45,.20);
+      border-radius:50%;
+      pointer-events:none;
+    }
+    .hero::before{width:560px;height:560px;right:-280px;top:-190px}
+    .hero::after{width:420px;height:420px;left:-250px;bottom:-220px}
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.02fr .98fr;
+      gap:65px;
+      align-items:center;
+      position:relative;
+      z-index:1;
+    }
+
+    .eyebrow{
+      color:var(--gold);
+      text-transform:uppercase;
+      font-weight:700;
+      letter-spacing:3px;
+      font-size:12px;
+      margin-bottom:17px;
+    }
+
+    .hero h1{
+      font-family:"Cinzel Decorative",serif;
+      font-size:clamp(40px,5.5vw,72px);
+      line-height:1.13;
+      color:var(--deep-teal);
+      margin-bottom:20px;
+    }
+    .hero h1 span{color:var(--gold)}
+    .tagline{
+      font-family:"Cormorant Garamond",serif;
+      font-size:clamp(24px,3vw,34px);
+      line-height:1.25;
+      color:var(--teal-dark);
+      margin-bottom:18px;
+      max-width:700px;
+    }
+    .hero p{
+      color:var(--muted);
+      max-width:650px;
+      font-size:15px;
+      margin-bottom:28px;
+    }
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+
+    .hero-logo-wrap{
+      min-height:590px;
+      display:grid;
+      place-items:center;
+      padding:20px;
+      position:relative;
+    }
+    .logo-aura{
+      position:absolute;
+      width:520px;height:520px;
+      border-radius:50%;
+      background:radial-gradient(circle,rgba(24,184,186,.11),transparent 68%);
+    }
+    .hero-logo{
+      position:relative;
+      width:min(570px,100%);
+      filter:drop-shadow(0 20px 25px rgba(7,87,90,.12));
+      animation:float 5s ease-in-out infinite;
+    }
+    @keyframes float{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-10px)}
+    }
+
+    .trust-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:18px;
+      margin-top:27px;
+      color:var(--deep-teal);
+      font-size:11px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:1px;
+    }
+    .trust-row span::before{
+      content:"✦";
+      color:var(--gold);
+      margin-right:7px;
+    }
+
+    /* ---------- SECTIONS ---------- */
+    section{padding:105px 0}
+    .section-kicker{
+      text-align:center;
+      color:var(--gold);
+      font-size:12px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:3px;
+      margin-bottom:10px;
+    }
+    .section-title{
+      text-align:center;
+      font-family:"Cinzel Decorative",serif;
+      font-size:clamp(31px,4vw,52px);
+      line-height:1.2;
+      color:var(--deep-teal);
+      margin-bottom:17px;
+    }
+    .section-intro{
+      text-align:center;
+      max-width:760px;
+      margin:0 auto 50px;
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    /* ---------- STATEMENT ---------- */
+    .statement{
+      background:var(--teal-dark);
+      color:#fff;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+    .statement::before{
+      content:"♕";
+      position:absolute;
+      font-size:260px;
+      opacity:.045;
+      right:-30px;
+      top:-90px;
+    }
+    .statement .container{position:relative;z-index:1}
+    .statement h2{
+      font-family:"Cinzel Decorative",serif;
+      font-size:clamp(28px,4vw,47px);
+      line-height:1.25;
+      margin-bottom:16px;
+    }
+    .statement h2 span{color:var(--gold-light)}
+    .statement p{
+      max-width:780px;
+      margin:auto;
+      color:#dff6f4;
+      font-size:16px;
+    }
+
+    /* ---------- STORY ---------- */
+    .story-grid{
+      display:grid;
+      grid-template-columns:.85fr 1.15fr;
+      gap:65px;
+      align-items:center;
+    }
+    .story-card{
+      min-height:460px;
+      border:1px solid var(--line);
+      border-radius:34px;
+      background:
+        radial-gradient(circle at 30% 20%,rgba(24,184,186,.14),transparent 30%),
+        linear-gradient(145deg,#fff,#eefaf9);
+      display:grid;
+      place-items:center;
+      padding:30px;
+      position:relative;
+      overflow:hidden;
+    }
+    .story-card::before{
+      content:"✦";
+      position:absolute;
+      color:var(--gold);
+      font-size:120px;
+      opacity:.12;
+      top:20px;right:25px;
+    }
+    .story-emblem{
+      width:210px;height:210px;
+      border:2px solid var(--gold);
+      border-radius:50%;
+      display:grid;place-items:center;
+      color:var(--deep-teal);
+      text-align:center;
+      padding:25px;
+      font-family:"Cinzel Decorative",serif;
+      font-size:23px;
+      background:rgba(255,255,255,.75);
+      box-shadow:var(--shadow);
+    }
+    .story-copy h3{
+      font-family:"Cinzel Decorative",serif;
+      color:var(--deep-teal);
+      font-size:31px;
+      margin-bottom:18px;
+    }
+    .story-copy p{
+      color:var(--muted);
+      margin-bottom:16px;
+      font-size:15px;
+    }
+    .highlight{
+      border-left:3px solid var(--gold);
+      padding:13px 0 13px 18px;
+      color:var(--deep-teal) !important;
+      font-family:"Cormorant Garamond",serif;
+      font-size:23px !important;
+    }
+
+    /* ---------- WHO WE SERVE ---------- */
+    .ideal{background:#f3fbfa}
+    .ideal-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:24px;
+    }
+    .ideal-box{
+      background:#fff;
+      border:1px solid rgba(24,184,186,.13);
+      border-radius:22px;
+      padding:29px;
+      box-shadow:0 12px 40px rgba(7,87,90,.06);
+    }
+    .ideal-box h3{
+      color:var(--deep-teal);
+      font-family:"Cinzel Decorative",serif;
+      font-size:20px;
+      margin-bottom:8px;
+    }
+    .ideal-box p{color:var(--muted);font-size:14px}
+
+    /* ---------- SERVICES ---------- */
+    .service-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+    .service-card{
+      background:#fff;
+      border:1px solid rgba(214,165,45,.22);
+      border-radius:20px;
+      padding:28px 22px;
+      box-shadow:var(--shadow);
+      transition:.3s;
+    }
+    .service-card:hover{transform:translateY(-6px)}
+    .service-icon{
+      width:48px;height:48px;
+      border-radius:50%;
+      background:#e4f8f6;
+      color:var(--deep-teal);
+      display:grid;place-items:center;
+      margin-bottom:17px;
+      font-size:21px;
+    }
+    .service-card h3{
+      font-family:"Cinzel Decorative",serif;
+      color:var(--deep-teal);
+      font-size:17px;
+      margin-bottom:9px;
+    }
+    .service-card p{color:var(--muted);font-size:13px}
+
+    /* ---------- PROCESS ---------- */
+    .process{background:var(--teal-dark)}
+    .process .section-title{color:#fff}
+    .process .section-intro{color:#d8eeee}
+    .process-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+    }
+    .process-step{
+      border:1px solid rgba(244,217,139,.32);
+      border-radius:22px;
+      padding:30px 22px;
+      color:#fff;
+      background:rgba(255,255,255,.04);
+    }
+    .step-number{
+      font-family:"Cinzel Decorative",serif;
+      color:var(--gold-light);
+      font-size:30px;
+      margin-bottom:12px;
+    }
+    .process-step h3{
+      font-family:"Cinzel Decorative",serif;
+      font-size:17px;
+      margin-bottom:8px;
+    }
+    .process-step p{font-size:13px;color:#d8eeee}
+
+    /* ---------- PACKAGE ---------- */
+    .package-wrap{
+      max-width:900px;
+      margin:auto;
+      border:2px solid var(--gold);
+      border-radius:32px;
+      padding:4px;
+      background:linear-gradient(135deg,var(--gold),#f6e1a2,var(--gold));
+      box-shadow:0 25px 70px rgba(214,165,45,.15);
+    }
+    .package{
+      border-radius:27px;
+      background:#fff;
+      padding:50px;
+      text-align:center;
+    }
+    .package-badge{
+      display:inline-block;
+      padding:7px 14px;
+      border-radius:999px;
+      background:#e7f8f7;
+      color:var(--deep-teal);
+      font-size:10px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:2px;
+      margin-bottom:15px;
+    }
+    .package h3{
+      font-family:"Cinzel Decorative",serif;
+      color:var(--deep-teal);
+      font-size:31px;
+    }
+    .package-price{
+      font-family:"Cinzel Decorative",serif;
+      font-size:46px;
+      color:var(--gold);
+      margin:8px 0 3px;
+    }
+    .package-note{color:var(--muted);font-size:12px;margin-bottom:28px}
+    .package-list{
+      list-style:none;
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:9px 22px;
+      text-align:left;
+      margin:25px 0 32px;
+    }
+    .package-list li{
+      color:var(--muted);
+      font-size:13px;
+      padding:7px 0 7px 23px;
+      position:relative;
+    }
+    .package-list li::before{
+      content:"✓";
+      color:var(--gold);
+      position:absolute;
+      left:0;
+      font-weight:800;
+    }
+
+    /* ---------- ADD ONS ---------- */
+    .addons{background:#f3fbfa}
+    .addon-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+    .addon{
+      background:#fff;
+      padding:27px;
+      border-radius:20px;
+      border-top:3px solid var(--gold);
+      box-shadow:0 12px 40px rgba(7,87,90,.06);
+    }
+    .addon h3{
+      font-family:"Cinzel Decorative",serif;
+      color:var(--deep-teal);
+      font-size:18px;
+      margin-bottom:7px;
+    }
+    .addon-price{
+      color:var(--gold);
+      font-weight:700;
+      margin-bottom:8px;
+    }
+    .addon p{color:var(--muted);font-size:13px}
+
+    /* ---------- OWNERS ---------- */
+    .owners-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:28px;
+      max-width:900px;
+      margin:auto;
+    }
+    .owner-card{
+      border-radius:28px;
+      overflow:hidden;
+      background:#fff;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      text-align:center;
+    }
+    .owner-photo{
+      height:370px;
+      display:grid;
+      place-items:center;
+      background:
+        radial-gradient(circle at 50% 25%,rgba(24,184,186,.18),transparent 30%),
+        linear-gradient(145deg,#e8f8f7,#fff);
+      color:var(--gold);
+      font-family:"Cinzel Decorative",serif;
+      font-size:16px;
+      padding:25px;
+    }
+    .owner-photo span{
+      border:1px dashed var(--gold);
+      border-radius:20px;
+      padding:18px;
+      max-width:210px;
+    }
+    .owner-info{padding:25px}
+    .owner-info h3{
+      font-family:"Cinzel Decorative",serif;
+      color:var(--deep-teal);
+      font-size:22px;
+    }
+    .owner-role{
+      color:var(--gold);
+      text-transform:uppercase;
+      letter-spacing:2px;
+      font-size:10px;
+      font-weight:700;
+      margin:5px 0 10px;
+    }
+    .owner-info p{color:var(--muted);font-size:13px}
+
+    /* ---------- FAITH ---------- */
+    .faith{
+      text-align:center;
+      color:#fff;
+      background:
+        radial-gradient(circle at center,rgba(24,184,186,.18),transparent 45%),
+        var(--deep-teal);
+      position:relative;
+    }
+    .cross{
+      color:var(--gold-light);
+      font-family:"Cormorant Garamond",serif;
+      font-size:50px;
+      line-height:1;
+      margin-bottom:10px;
+    }
+    .faith h2{
+      font-family:"Cinzel Decorative",serif;
+      color:#fff;
+      font-size:clamp(28px,4vw,48px);
+      margin-bottom:18px;
+    }
+    .faith p{
+      max-width:760px;
+      margin:auto;
+      color:#dff6f4;
+      font-size:16px;
+    }
+
+    /* ---------- TESTIMONIALS ---------- */
+    .testimonial-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+    .testimonial{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:30px;
+      box-shadow:var(--shadow);
+    }
+    .stars{color:var(--gold);letter-spacing:4px;margin-bottom:13px}
+    .testimonial p{
+      color:var(--muted);
+      font-family:"Cormorant Garamond",serif;
+      font-size:20px;
+      line-height:1.45;
+      margin-bottom:17px;
+    }
+    .testimonial strong{color:var(--deep-teal);font-size:12px}
+
+    /* ---------- FAQ ---------- */
+    .faq{max-width:850px;margin:auto}
+    details{
+      background:#fff;
+      border:1px solid rgba(214,165,45,.22);
+      border-radius:15px;
+      padding:19px 22px;
+      margin-bottom:11px;
+      box-shadow:0 7px 24px rgba(7,87,90,.05);
+    }
+    summary{
+      cursor:pointer;
+      color:var(--deep-teal);
+      font-weight:700;
+      font-size:14px;
+    }
+    details p{
+      color:var(--muted);
+      font-size:13px;
+      padding-top:13px;
+    }
+
+    /* ---------- CONTACT ---------- */
+    .contact{
+      background:
+        linear-gradient(rgba(7,87,90,.96),rgba(7,87,90,.96));
+      color:#fff;
+    }
+    .contact-grid{
+      display:grid;
+      grid-template-columns:.85fr 1.15fr;
+      gap:50px;
+      align-items:start;
+    }
+    .contact h2{
+      font-family:"Cinzel Decorative",serif;
+      font-size:42px;
+      line-height:1.2;
+      margin-bottom:15px;
+    }
+    .contact-copy p{color:#d8eeee;font-size:14px;margin-bottom:18px}
+    .contact-list{
+      list-style:none;
+      color:#d8eeee;
+      font-size:13px;
+    }
+    .contact-list li{margin:9px 0}
+    .contact-list strong{color:var(--gold-light)}
+    .form{
+      background:#fff;
+      border-radius:25px;
+      padding:30px;
+      color:var(--ink);
+      box-shadow:var(--shadow);
+    }
+    .form h3{
+      font-family:"Cinzel Decorative",serif;
+      color:var(--deep-teal);
+      font-size:22px;
+      margin-bottom:18px;
+    }
+    .field{margin-bottom:13px}
+    .field label{
+      display:block;
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      color:var(--deep-teal);
+      margin-bottom:5px;
+    }
+    .field input,.field textarea,.field select{
+      width:100%;
+      border:1px solid #d5e4e3;
+      border-radius:11px;
+      padding:12px 13px;
+      outline:none;
+      background:#fbfefd;
+      color:var(--ink);
+    }
+    .field input:focus,.field textarea:focus,.field select:focus{
+      border-color:var(--teal);
+      box-shadow:0 0 0 3px rgba(24,184,186,.10);
+    }
+    .field textarea{min-height:115px;resize:vertical}
+
+    /* ---------- FOOTER ---------- */
+    footer{
+      background:#043f42;
+      color:#cfe6e5;
+      padding:45px 0 25px;
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.3fr 1fr 1fr;
+      gap:35px;
+      padding-bottom:28px;
+      border-bottom:1px solid rgba(255,255,255,.12);
+    }
+    footer h3{
+      font-family:"Cinzel Decorative",serif;
+      color:#fff;
+      font-size:17px;
+      margin-bottom:10px;
+    }
+    footer p,footer a{font-size:12px;color:#b9d4d3}
+    footer a:hover{color:var(--gold-light)}
+    .footer-links{display:grid;gap:6px}
+    .copyright{
+      padding-top:20px;
+      text-align:center;
+      font-size:10px;
+      letter-spacing:.7px;
+      color:#8fb9b8;
+    }
+
+    /* ---------- REVEAL ---------- */
+    .reveal{
+      opacity:0;
+      transform:translateY(20px);
+      transition:opacity .7s ease,transform .7s ease;
+    }
+    .reveal.visible{
+      opacity:1;
+      transform:none;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media(max-width:950px){
+      .nav-links{
+        display:none;
+        position:absolute;
+        left:0;right:0;top:88px;
+        background:#fff;
+        padding:20px 5%;
+        border-bottom:1px solid var(--line);
+        flex-direction:column;
+        align-items:stretch;
+      }
+      .nav-links.open{display:flex}
+      .nav-links a{padding:10px 0}
+      .menu{display:block}
+
+      .hero-grid,.story-grid,.contact-grid{grid-template-columns:1fr}
+      .hero-logo-wrap{min-height:420px;order:-1}
+      .hero-logo{width:min(480px,95%)}
+      .service-grid{grid-template-columns:repeat(2,1fr)}
+      .process-grid{grid-template-columns:repeat(2,1fr)}
+      .testimonial-grid{grid-template-columns:1fr}
+      .addon-grid{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+
+    @media(max-width:650px){
+      section{padding:75px 0}
+      .hero{padding:55px 0 70px}
+      .hero-logo-wrap{min-height:320px}
+      .logo-aura{width:320px;height:320px}
+      .hero-actions .btn{width:100%}
+      .ideal-grid,.owners-grid,.service-grid,.process-grid,.package-list,.footer-grid{
+        grid-template-columns:1fr
+      }
+      .package{padding:30px 20px}
+      .owner-photo{height:310px}
+      .contact h2{font-size:34px}
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    Faith • Love • Joy • Goodness — Your Wedding Journey Deserves a Bestie
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Bestie Brides home">
+        <div class="brand-mark">BB</div>
+        <div>
+          <div class="brand-name">BESTIE BRIDES</div>
+          <span class="brand-sub">A Bestie for the Journey</span>
+        </div>
+      </a>
+
+      <button class="menu" id="menuBtn" aria-label="Open navigation">☰</button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">Our Story</a>
+        <a href="#services">Services</a>
+        <a href="#package">Package</a>
+        <a href="#owners">Meet Your Besties</a>
+        <a href="#faq">FAQ</a>
+        <a class="nav-cta" href="#contact">Book a Bestie</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+
+        <div class="hero-copy reveal">
+          <div class="eyebrow">Faith-Based • Black-Owned • Bride-Focused</div>
+
+          <h1>
+            Your Wedding Has a Planner.
+            <span>You Have a Bestie.</span>
+          </h1>
+
+          <div class="tagline">
+            “Bestie Brides isn’t just a bestie for the day but a bestie for the journey along the way.”
+          </div>
+
+          <p>
+            Bestie Brides provides you with your very own professional Bestie
+            to help you navigate the decisions, details, appointments,
+            reminders, communication and moments that come with your wedding journey.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Book Your Bestie ✦</a>
+            <a href="#services" class="btn btn-outline">Explore Our Support</a>
+          </div>
+
+          <div class="trust-row">
+            <span>Bride-first support</span>
+            <span>Personalized guidance</span>
+            <span>Peace of mind</span>
+          </div>
+        </div>
+
+        <div class="hero-logo-wrap reveal">
+          <div class="logo-aura"></div>
+          <img
+            class="hero-logo"
+            src="bestie-brides-logo.png"
+            alt="Bestie Brides turquoise and gold logo with crown and two brides"
+          />
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BRAND STATEMENT -->
+    <section class="statement">
+      <div class="container reveal">
+        <div class="section-kicker" style="color:var(--gold-light)">The Bestie Brides Difference</div>
+        <h2>
+          Wedding planners take care of the <span>wedding.</span><br>
+          Bestie Brides takes care of the <span>bride.</span>
+        </h2>
+        <p>
+          Your wedding deserves organization. But you deserve support, encouragement,
+          another perspective and someone in your corner, too.
+        </p>
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section id="about">
+      <div class="container story-grid">
+
+        <div class="story-card reveal">
+          <div class="story-emblem">
+            TWO BESTIES<br>
+            ONE PURPOSE<br>
+            <span style="color:var(--gold)">ONE JOURNEY</span>
+          </div>
+        </div>
+
+        <div class="story-copy reveal">
+          <div class="section-kicker" style="text-align:left">Our Story</div>
+          <h3>It Started With Two Best Friends.</h3>
+
+          <p>
+            Our story begins with two best friends whom God brought together
+            to help one another navigate the struggles of life.
+          </p>
+
+          <p>
+            From personal life challenges to seasons when simply being able
+            to eat or pay rent felt difficult, we learned firsthand what it
+            means to need someone in your corner.
+          </p>
+
+          <p>
+            Then it hit us: <strong>every bride deserves that same kind of support.</strong>
+          </p>
+
+          <p>
+            We saw the stress levels that brides endure during their wedding journey.
+            What is supposed to be a season full of beautiful memories can quickly
+            turn into chaos.
+          </p>
+
+          <p class="highlight">
+            Just like God put us together to help one another through stressful
+            seasons, we believe every bride deserves a Bestie by her side
+            through the good times and the tough times of her wedding journey.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- IDEAL BRIDE -->
+    <section class="ideal">
+      <div class="container">
+        <div class="section-kicker">Is This You?</div>
+        <h2 class="section-title">You Don't Have to Do It Alone.</h2>
+        <p class="section-intro">
+          Bestie Brides is for the bride who wants someone professional,
+          dependable and genuinely invested in helping her navigate the journey.
+        </p>
+
+        <div class="ideal-grid">
+          <div class="ideal-box reveal">
+            <h3>“I Need Someone in My Corner.”</h3>
+            <p>
+              You need someone who can help you think through important wedding
+              decisions and keep you moving forward.
+            </p>
+          </div>
+
+          <div class="ideal-box reveal">
+            <h3>“I Have So Much to Remember.”</h3>
+            <p>
+              Appointments, deadlines, vendors, payments, fittings and details
+              can become overwhelming. Your Bestie helps keep it organized.
+            </p>
+          </div>
+
+          <div class="ideal-box reveal">
+            <h3>“I Want to Enjoy This.”</h3>
+            <p>
+              Your engagement should contain beautiful memories—not just a
+              never-ending list of things to do.
+            </p>
+          </div>
+
+          <div class="ideal-box reveal">
+            <h3>“I Want Professional Support.”</h3>
+            <p>
+              You may have loved ones around you, but you want dedicated support
+              from someone whose role is centered around you, the bride.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+        <div class="section-kicker">What We Do</div>
+        <h2 class="section-title">Your Bestie Has Your Back.</h2>
+        <p class="section-intro">
+          Our support is designed around four things every bride deserves:
+          <strong>Plan With You. Prepare You. Support You. Celebrate You.</strong>
+        </p>
+
+        <div class="service-grid">
+
+          <article class="service-card reveal">
+            <div class="service-icon">♕</div>
+            <h3>Plan With You</h3>
+            <p>
+              Personalized wedding checklists, timelines, vendor organization,
+              appointment scheduling, budget organization, reminders,
+              documents, guest lists, RSVPs, seating-chart organization and
+              wedding-day timeline creation.
+            </p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">♡</div>
+            <h3>Prepare You</h3>
+            <p>
+              Dress appointments, fittings, alterations timelines, hair,
+              makeup, nails, skincare, accessories, shoes, veil, jewelry,
+              photographer coordination and emergency beauty supplies.
+            </p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">✦</div>
+            <h3>Support You</h3>
+            <p>
+              Bridesmaid communication, dress deadlines, fittings,
+              accessories, bridal-party itineraries, responsibilities,
+              transportation coordination, gift coordination and wedding-weekend
+              schedule reminders.
+            </p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">❀</div>
+            <h3>Celebrate You</h3>
+            <p>
+              Bridal-shower themes, itineraries, decorations, party favors,
+              games, guest communication, transportation coordination,
+              vendor coordination and schedule management.
+            </p>
+          </article>
+
+        </div>
+
+        <div style="margin-top:20px" class="service-grid">
+
+          <article class="service-card reveal">
+            <div class="service-icon">☑</div>
+            <h3>Protect Your Peace</h3>
+            <p>
+              We help keep things organized, create clear timelines,
+              communicate information, help prioritize decisions and reduce
+              unnecessary interruptions.
+            </p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">⌁</div>
+            <h3>Problem-Solving Support</h3>
+            <p>
+              We help identify potential problems early and assist with
+              appropriate vendor communication so the bride can stay focused
+              on what matters.
+            </p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">◈</div>
+            <h3>Wedding-Weekend Support</h3>
+            <p>
+              We help confirm schedules, keep the bride updated and create
+              a calm, organized environment around the wedding weekend.
+            </p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">♥</div>
+            <h3>Bride-Centered Care</h3>
+            <p>
+              Every service begins with one question:
+              <strong>What does the bride need right now?</strong>
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process">
+      <div class="container">
+        <div class="section-kicker">How It Works</div>
+        <h2 class="section-title">From “I Need Help” to “I Got This.”</h2>
+        <p class="section-intro">
+          Your Bestie is there to help make the journey feel more organized,
+          supported and joyful.
+        </p>
+
+        <div class="process-grid">
+          <div class="process-step reveal">
+            <div class="step-number">01</div>
+            <h3>Meet Your Bestie</h3>
+            <p>
+              Tell us about your wedding, your priorities and where you need
+              the most support.
+            </p>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="step-number">02</div>
+            <h3>Build Your Plan</h3>
+            <p>
+              We organize the details, deadlines, appointments and information
+              around your journey.
+            </p>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="step-number">03</div>
+            <h3>Stay Supported</h3>
+            <p>
+              Your Bestie helps you stay informed, prepared and focused as
+              your wedding gets closer.
+            </p>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="step-number">04</div>
+            <h3>Celebrate You</h3>
+            <p>
+              The goal is simple: help you experience more joy and less
+              unnecessary chaos along the way.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PACKAGE -->
+    <section id="package">
+      <div class="container">
+        <div class="section-kicker">Your Signature Experience</div>
+        <h2 class="section-title">The Bestie Brides Package</h2>
+        <p class="section-intro">
+          A comprehensive bride-support experience built around your wedding journey.
+        </p>
+
+        <div class="package-wrap reveal">
+          <div class="package">
+            <div class="package-badge">Signature Bestie Experience</div>
+            <h3>Bestie Brides Package</h3>
+
+            <div class="package-price">$7,000+</div>
+            <div class="package-note">Starting price • customized to your wedding journey</div>
+
+            <ul class="package-list">
+              <li>Personalized wedding checklist</li>
+              <li>Wedding planning timeline</li>
+              <li>Vendor organization</li>
+              <li>Vendor contact list</li>
+              <li>Appointment scheduling</li>
+              <li>Vendor meeting preparation</li>
+              <li>Wedding budget organization</li>
+              <li>Payment & deposit reminders</li>
+              <li>Contract & document organization</li>
+              <li>Wedding task tracking</li>
+              <li>Important deadline reminders</li>
+              <li>Guest-list organization</li>
+              <li>Wedding website checklist</li>
+              <li>RSVP tracking assistance</li>
+              <li>Seating-chart organization</li>
+              <li>Wedding-day timeline creation</li>
+              <li>Dress & fitting support</li>
+              <li>Bridal-party communication</li>
+              <li>Wedding-weekend reminders</li>
+              <li>Schedule & information management</li>
+              <li>Appropriate vendor communication</li>
+              <li>Peace-of-mind support</li>
+            </ul>
+
+            <a href="#contact" class="btn btn-gold">Reserve Your Bestie</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADD-ONS -->
+    <section class="addons">
+      <div class="container">
+        <div class="section-kicker">Make It Yours</div>
+        <h2 class="section-title">Bestie Add-Ons</h2>
+        <p class="section-intro">
+          Add extra support where you need it most. <strong>$500 each.</strong>
+        </p>
+
+        <div class="addon-grid">
+          <div class="addon reveal">
+            <h3>Bridal Appointment Concierge</h3>
+            <div class="addon-price">$500</div>
+            <p>Extra appointment scheduling and organization for your bridal beauty journey.</p>
+          </div>
+
+          <div class="addon reveal">
+            <h3>Bridal Party Support</h3>
+            <div class="addon-price">$500</div>
+            <p>Additional communication and itinerary support for your bridal party.</p>
+          </div>
+
+          <div class="addon reveal">
+            <h3>Wedding Weekend Concierge</h3>
+            <div class="addon-price">$500</div>
+            <p>Additional wedding-weekend schedule, reminder and coordination support.</p>
+          </div>
+
+          <div class="addon reveal">
+            <h3>Vendor Communication Support</h3>
+            <div class="addon-price">$500</div>
+            <p>Additional help keeping appropriate vendor communication organized.</p>
+          </div>
+
+          <div class="addon reveal">
+            <h3>Bridal Shower Support</h3>
+            <div class="addon-price">$500</div>
+            <p>Extra support for themes, itineraries, decorations, games and guest communication.</p>
+          </div>
+
+          <div class="addon reveal">
+            <h3>Custom Bestie Add-On</h3>
+            <div class="addon-price">$500</div>
+            <p>Need something specific? Let's discuss a custom support experience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OWNERS -->
+    <section id="owners">
+      <div class="container">
+        <div class="section-kicker">The Women Behind Bestie Brides</div>
+        <h2 class="section-title">Meet Your Besties</h2>
+        <p class="section-intro">
+          Two best friends. One faith. One mission: helping brides feel supported,
+          celebrated and cared for throughout the journey.
+        </p>
+
+        <div class="owners-grid">
+
+          <!-- Replace each placeholder with an owner photo:
+               <img src="owner-1.jpg" alt="Owner Name">
+          -->
+          <article class="owner-card reveal">
+            <div class="owner-photo">
+              <span>
+                OWNER PHOTO<br><br>
+                Replace this area with your professional owner photo.
+              </span>
+            </div>
+            <div class="owner-info">
+              <h3>Owner One</h3>
+              <div class="owner-role">Co-Founder • Bestie Bride</div>
+              <p>
+                Add your personal bio here—your story, your personality,
+                what you love about serving brides and what makes you a great Bestie.
+              </p>
+            </div>
+          </article>
+
+          <article class="owner-card reveal">
+            <div class="owner-photo">
+              <span>
+                OWNER PHOTO<br><br>
+                Replace this area with your professional owner photo.
+              </span>
+            </div>
+            <div class="owner-info">
+              <h3>Owner Two</h3>
+              <div class="owner-role">Co-Founder • Bestie Bride</div>
+              <p>
+                Add your personal bio here—your story, your personality,
+                what you love about serving brides and what makes you a great Bestie.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAITH -->
+    <section class="faith">
+      <div class="container reveal">
+        <div class="cross">✝</div>
+        <div class="section-kicker" style="color:var(--gold-light)">Faith at the Heart of Our Business</div>
+        <h2>God Gave Us the Idea.<br>Love Gives Us the Mission.</h2>
+        <p>
+          We believe that just as God placed the two of us together to help
+          one another through difficult seasons, He can use Bestie Brides to
+          bring support, love, joy and goodness into a bride's wedding journey.
+          Our faith is part of our foundation and the reason we believe no bride
+          should have to feel alone.
+        </p>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section>
+      <div class="container">
+        <div class="section-kicker">Bride Love</div>
+        <h2 class="section-title">Kind Words From Our Brides</h2>
+        <p class="section-intro">
+          Replace these sample cards with your real bride testimonials as you grow.
+        </p>
+
+        <div class="testimonial-grid">
+          <article class="testimonial reveal">
+            <div class="stars">★★★★★</div>
+            <p>
+              “Add a real bride testimonial here about how having a Bestie
+              helped her feel supported and less overwhelmed.”
+            </p>
+            <strong>— BRIDE NAME</strong>
+          </article>
+
+          <article class="testimonial reveal">
+            <div class="stars">★★★★★</div>
+            <p>
+              “Add a real bride testimonial here about your organization,
+              encouragement and personal support.”
+            </p>
+            <strong>— BRIDE NAME</strong>
+          </article>
+
+          <article class="testimonial reveal">
+            <div class="stars">★★★★★</div>
+            <p>
+              “Add a real bride testimonial here about her wedding experience
+              and how Bestie Brides helped protect her peace.”
+            </p>
+            <strong>— BRIDE NAME</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="ideal">
+      <div class="container">
+        <div class="section-kicker">Questions Brides Ask</div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+
+        <div class="faq">
+
+          <details class="reveal">
+            <summary>Are Bestie Brides wedding planners?</summary>
+            <p>
+              Bestie Brides is designed specifically around the bride. Our role
+              is bride-focused support. We help organize information, reminders,
+              appointments, decisions and communication so the bride has dedicated
+              support throughout her journey.
+            </p>
+          </details>
+
+          <details class="reveal">
+            <summary>Who is Bestie Brides for?</summary>
+            <p>
+              Our ideal bride is someone who wants professional support by her
+              side during the wedding journey, especially when she does not have
+              someone who can provide that kind of dedicated help.
+            </p>
+          </details>
+
+          <details class="reveal">
+            <summary>What does the $7,000 starting package include?</summary>
+            <p>
+              The Bestie Brides Package is designed to provide comprehensive
+              bride-centered support. Your consultation will help determine the
+              exact scope and priorities for your wedding journey.
+            </p>
+          </details>
+
+          <details class="reveal">
+            <summary>Can I customize my Bestie experience?</summary>
+            <p>
+              Yes. Add-ons are available at $500 each, and custom support can
+              be discussed during your consultation.
+            </p>
+          </details>
+
+          <details class="reveal">
+            <summary>When should I book my Bestie?</summary>
+            <p>
+              Earlier is generally better because it gives your Bestie more time
+              to help organize your journey. Your consultation will determine
+              whether Bestie Brides is the right fit for your wedding timeline.
+            </p>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <div class="container contact-grid">
+
+        <div class="contact-copy reveal">
+          <div class="section-kicker" style="text-align:left;color:var(--gold-light)">Let's Talk, Bride</div>
+          <h2>Ready to Have a Bestie in Your Corner?</h2>
+          <p>
+            Your wedding journey is too important to spend feeling like
+            you have to figure everything out alone.
+          </p>
+          <p>
+            Tell us what you need. We'll learn about your wedding and
+            determine how Bestie Brides can support you.
+          </p>
+
+          <ul class="contact-list">
+            <li><strong>Starting Package:</strong> $7,000+</li>
+            <li><strong>Add-Ons:</strong> $500 each</li>
+            <li><strong>Service:</strong> Personalized bride support</li>
+            <li><strong>Booking:</strong> Consultation required</li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="bookingForm">
+          <h3>Start Your Bestie Journey</h3>
+
+          <div class="field">
+            <label for="name">Bride's Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required>
+          </div>
+
+          <div class="field">
+            <label for="weddingDate">Wedding Date</label>
+            <input id="weddingDate" name="weddingDate" type="date">
+          </div>
+
+          <div class="field">
+            <label for="support">What do you need most?</label>
+            <select id="support" name="support">
+              <option>Planning & organization</option>
+              <option>Appointments & bridal preparation</option>
+              <option>Bridal party support</option>
+              <option>Wedding-weekend support</option>
+              <option>Vendor & schedule organization</option>
+              <option>I'm not sure — I need a Bestie</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Tell Us About Your Wedding</label>
+            <textarea id="message" name="message" placeholder="Tell us what you're planning and where you need support..."></textarea>
+          </div>
+
+          <button class="btn btn-primary" type="submit">Request My Consultation ✦</button>
+
+          <p style="font-size:10px;color:#718080;margin-top:10px">
+            Website setup note: connect this form to your preferred email,
+            booking platform or form service before launch.
+          </p>
+        </form>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+
+        <div>
+          <h3>Bestie Brides</h3>
+          <p>
+            A faith-based, Black-owned bride-support company helping brides
+            experience more ease, love, joy and goodness along the wedding journey.
+          </p>
+        </div>
+
+        <div>
+          <h3>Explore</h3>
+          <div class="footer-links">
+            <a href="#about">Our Story</a>
+            <a href="#services">Services</a>
+            <a href="#package">Bestie Package</a>
+            <a href="#owners">Meet Your Besties</a>
+            <a href="#faq">FAQ</a>
+          </div>
+        </div>
+
+        <div>
+          <h3>Connect</h3>
+          <div class="footer-links">
+            <a href="#contact">Book a Bestie</a>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="mailto:YOUR-EMAIL-HERE@example.com">Email Us</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        © 2026 Bestie Brides. All Rights Reserved. • Faith • Love • Joy • Goodness
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => navLinks.classList.remove("open"));
+    });
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12});
+
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+    // Booking form
+    // Replace the email address below with the real Bestie Brides email
+    document.getElementById("bookingForm").addEventListener("submit", function(e){
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const date = document.getElementById("weddingDate").value;
+      const support = document.getElementById("support").value;
+      const message = document.getElementById("message").value;
+
+      const subject = encodeURIComponent("Bestie Brides Consultation Request");
+      const body = encodeURIComponent(
+        `Bride Name: ${name}\n` +
+        `Email: ${email}\n` +
+        `Wedding Date: ${date || "Not provided"}\n` +
+        `Support Needed: ${support}\n\n` +
+        `Wedding Details:\n${message}`
+      );
+
+      window.location.href =
+        `mailto:YOUR-EMAIL-HERE@example.com?subject=${subject}&body=${body}`;
+    });
+  </script>
+
+</body>
+</html>
