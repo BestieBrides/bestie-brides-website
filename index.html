@@ -71,9 +71,16 @@
     }
 
     .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+}
+
+.top-logo{
+  width:170px;
+  height:auto;
+  display:block;
+  object-fit:contain;
     }
     .brand-mark{
       width:48px;height:48px;
@@ -816,6 +823,9 @@
       .hero{padding:55px 0 70px}
       .hero-logo-wrap{min-height:320px}
       .logo-aura{width:320px;height:320px}
+       .top-logo{
+    width:135px;
+  }
       .hero-actions .btn{width:100%}
       .ideal-grid,.owners-grid,.service-grid,.process-grid,.package-list,.footer-grid{
         grid-template-columns:1fr
@@ -836,11 +846,11 @@
   <header>
     <div class="container nav">
       <a class="brand" href="#home" aria-label="Bestie Brides home">
-        <div class="brand-mark">BB</div>
-        <div>
-          <div class="brand-name">BESTIE BRIDES</div>
-          <span class="brand-sub">A Bestie for the Journey</span>
-        </div>
+          <img
+        class="top-logo"
+        src="Bestie Brides LOGO.png"
+        alt="Bestie Brides Logo"
+      />
       </a>
 
       <button class="menu" id="menuBtn" aria-label="Open navigation">☰</button>
@@ -895,8 +905,8 @@
           <div class="logo-aura"></div>
           <img
             class="hero-logo"
-            src="bestie-brides-logo.png"
-            alt="Bestie Brides turquoise and gold logo with crown and two brides"
+            src="Bestie Brides LOGO.png"
+            alt="Bestie Brides LOGO"
           />
         </div>
 
