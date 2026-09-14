@@ -191,11 +191,12 @@
     .hero::after{width:420px;height:420px;left:-250px;bottom:-220px}
 
     .hero-grid{
-      .hero-grid{
-  display:grid;
-  grid-template-columns:1.02fr .98fr;
-  gap:65px;
-  align-items:center;
+      display:grid;
+      grid-template-columns:1.02fr .98fr;
+      gap:65px;
+      align-items:center;
+      position:relative;
+      z-index:1;
     }
 
     .eyebrow{
@@ -244,12 +245,11 @@
       border-radius:50%;
       background:radial-gradient(circle,rgba(24,184,186,.11),transparent 68%);
     }
- .hero-logo-{
-  width:220px;
-  max-width:65%;
-  margin-bottom:25px;
-  filter:drop-shadow(0 10px 20px rgba(7,87,90,.12));
-  animation:float 5s ease-in-out infinite;
+    .hero-logo{
+      position:relative;
+      width:min(570px,100%);
+      filter:drop-shadow(0 20px 25px rgba(7,87,90,.12));
+      animation:float 5s ease-in-out infinite;
     }
     @keyframes float{
       0%,100%{transform:translateY(0)}
@@ -862,11 +862,6 @@
       <div class="container hero-grid">
 
         <div class="hero-copy reveal">
-          <img
-  class="hero-logo"
-  src="Bestie Brides LOGO.png"
-  alt="Bestie Brides Logo"
->
           <div class="eyebrow">Faith-Based • Black-Owned • Bride-Focused</div>
 
           <h1>
@@ -900,8 +895,8 @@
           <div class="logo-aura"></div>
           <img
             class="hero-logo"
-            src="Bestie Brides LOGO.png"
-            alt="Bestie Brides Logo"
+            src="bestie-brides-logo.png"
+            alt="Bestie Brides turquoise and gold logo with crown and two brides"
           />
         </div>
 
