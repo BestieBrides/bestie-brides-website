@@ -1396,8 +1396,12 @@
             <li><strong>Booking:</strong> Consultation required</li>
           </ul>
         </div>
-
-        <form class="form reveal" id="bookingForm">
+  <form
+  class="form"
+  id="bookingForm"
+  action="https://formspree.io/f/xzebnynd"
+  method="POST"
+>
           <h3>Start Your Bestie Journey</h3>
 
           <div class="field">
@@ -1512,27 +1516,7 @@
 
     // Booking form
     // Replace the email address below with the real Bestie Brides email
-    document.getElementById("bookingForm").addEventListener("submit", function(e){
-      e.preventDefault();
-
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const date = document.getElementById("weddingDate").value;
-      const support = document.getElementById("support").value;
-      const message = document.getElementById("message").value;
-
-      const subject = encodeURIComponent("Bestie Brides Consultation Request");
-      const body = encodeURIComponent(
-        `Bride Name: ${name}\n` +
-        `Email: ${email}\n` +
-        `Wedding Date: ${date || "Not provided"}\n` +
-        `Support Needed: ${support}\n\n` +
-        `Wedding Details:\n${message}`
-      );
-
-      window.location.href =
-        `mailto:YOUR-EMAIL-HERE@example.com?subject=${subject}&body=${body}`;
-    });
+ 
   </script>
 
 </body>
