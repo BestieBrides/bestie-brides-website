@@ -669,12 +669,18 @@
     .faq{max-width:850px;margin:auto}
     details{
       background:#fff;
-      border:1px solid rgba(214,165,45,.22);
-      border-radius:15px;
-      padding:19px 22px;
-      margin-bottom:11px;
-      box-shadow:0 7px 24px rgba(7,87,90,.05);
-    }
+  border:2px solid #D6A52D;
+  border-radius:15px;
+  padding:19px 22px;
+  margin-bottom:14px;
+  box-shadow:0 7px 24px rgba(7,87,90,.05);
+}
+    details[open]{
+  border-color:#D6A52D;
+  box-shadow:
+    0 0 0 2px rgba(214,165,45,.12),
+    0 12px 30px rgba(7,87,90,.08);
+}
     summary{
       cursor:pointer;
       color:var(--deep-teal);
